@@ -10,6 +10,12 @@ import UIKit
 
 class UserListTableViewController: UITableViewController {
     
+    // 遷移先に渡す値
+    // 遷移先に渡す名前の情報
+    var giveName: String = String()
+    // 遷移先に渡す趣味の情報
+    var giveHobby: String = String()
+    
     // ユーザーデータ
     // 名前一覧
     let nameList: [String] = [
@@ -66,17 +72,33 @@ class UserListTableViewController: UITableViewController {
     // セルの操作
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell", for: indexPath)
-
         // セルに名前を表示
         cell.textLabel?.text = nameList[indexPath.row]
+        
         return cell
     }
     
     // セルを押された時の処理
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 押されたセルに対応する名前と趣味を遷移先に渡す変数に格納する
+        // 名前
+        giveName = nameList[indexPath.row]
+        // 趣味
+        giveHobby = hobbyList[indexPath.row]
         
         // 画面遷移の実行
         performSegue(withIdentifier: "showDetails", sender: nil)
+    }
+    
+    // 遷移前に動作する処理
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // 行き先の確認と遷移先画面が正しいかの確認
+        guard segue.identifier == "showDetails", let nextVC = segue.destination as? ViewController else {
+            return
+        }
+        // 遷移先に値を渡す
+        nextVC.receiveName = giveName
+        nextVC.receiveHobby = giveHobby
     }
 
 }

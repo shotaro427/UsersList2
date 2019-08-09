@@ -9,10 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // 遷移元から受け取る値を入れる変数
+    // 名前
+    var receiveName: String = String()
+    // 趣味
+    var receiveHobby: String = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // 確認
+        print(receiveName)
+        print(receiveHobby)
     }
 
 

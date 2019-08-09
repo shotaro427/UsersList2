@@ -104,10 +104,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fAf-MT-Hng"/>
                     </view>
+                    <connections>
+                        <outlet property="hobbyView" destination="uLU-bY-ebm" id="y8a-0x-52W"/>
+                        <outlet property="nameLabel" destination="XQL-oY-KrW" id="vO7-kq-raO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdF-OT-hJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="442" y="123"/>
+            <point key="canvasLocation" x="600" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Iel-1Q-nYK">

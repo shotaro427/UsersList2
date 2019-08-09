@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--ユーザーリスト-->
         <scene sceneID="EJB-cO-HSu">
             <objects>
                 <tableViewController id="uZx-ra-ibc" customClass="UserListTableViewController" customModule="UsersList2" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,45 +42,45 @@
                             <outlet property="delegate" destination="uZx-ra-ibc" id="5vm-MU-BRn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="9O2-yl-Xxs"/>
+                    <navigationItem key="navigationItem" title="ユーザーリスト" id="9O2-yl-Xxs"/>
                     <connections>
-                        <segue destination="Bxh-K9-htG" kind="showDetail" id="18p-vn-IjU"/>
+                        <segue destination="Bxh-K9-htG" kind="show" identifier="showDetails" id="GGN-Z7-bAr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIL-sS-9or" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-299" y="123"/>
         </scene>
-        <!--View Controller-->
+        <!--ユーザーデータ-->
         <scene sceneID="9hw-A5-gmI">
             <objects>
-                <viewController id="Bxh-K9-htG" customClass="ViewController" customModule="UsersList2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ユーザーデータ" id="Bxh-K9-htG" customClass="ViewController" customModule="UsersList2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z2e-UN-ach">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xjq-HZ-feD">
-                                <rect key="frame" x="20" y="74" width="374" height="42"/>
+                                <rect key="frame" x="20" y="118" width="374" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQL-oY-KrW">
-                                <rect key="frame" x="20" y="126" width="374" height="0.0"/>
+                                <rect key="frame" x="20" y="170" width="374" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="趣味" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fee-Qa-xor">
-                                <rect key="frame" x="20" y="136" width="374" height="42"/>
+                                <rect key="frame" x="20" y="180" width="374" height="42"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLU-bY-ebm">
-                                <rect key="frame" x="20" y="178" width="374" height="684"/>
+                                <rect key="frame" x="20" y="222" width="374" height="640"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

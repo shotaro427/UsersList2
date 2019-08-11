@@ -9,10 +9,28 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // 遷移元から受け取る値を入れる変数
+    // 名前
+    var receiveName: String = String()
+    // 趣味
+    var receiveHobby: String = String()
+    
+    // ユーザーリストの詳細情報を表示するラベル
+    // 名前を表示するラベル
+    @IBOutlet weak var nameLabel: UILabel!
+    // 趣味を表示するテキストビュー
+    @IBOutlet weak var hobbyView: UITextView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // ユーザーデータを表示
+        // 名前の表示
+        nameLabel.text = receiveName
+        // 趣味の表示
+        hobbyView.text = receiveHobby
+        
     }
 
 
